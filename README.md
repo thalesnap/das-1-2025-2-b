@@ -20,3 +20,15 @@ Acontece por exemplo, ao esconder a implementação interna de uma função, cla
 
 # Mais comentários
  O esperado de um código é que você possa remover uma parte do código e ainda assim fazer com que o sistema nao quebre, podendo evoluir no futuro o sistema sem que ele falhe.
+
+
+#Aula 04/08
+
+# Getters e Setters
+ São encapsulamentos, e servem para proteger a informação.
+
+# Coesao
+manter uma única responsabilidade por classe ou até método, para fazer com que realize uma única coisa bem feita, utilizado com bom senso torna torna o código mais fácil de entender e manter, sendo coeso.
+
+# Acoplamento 
+É a força da conexão entre duas classes. Alto acoplamento é quando um grupo de classes é altamente dependente umas das outras. E algo com baixo acoplamento é quando os componentes de um sistema têm pouca ou nenhuma dependência um do outro. O ideal é nao ter um alto acoplamento, porque uma mudança em um componente pode exigir modificações em vários outros, dificultando a manutenção, a reutilização e os testes.
