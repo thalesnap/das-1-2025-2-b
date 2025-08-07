@@ -1,5 +1,11 @@
 # Design e Arquitetura de Software 1 - 2025/2 Turma B - Thales
 
+# Bibliografia
+https://engsoftmoderna.info/cap5.html
+https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/2%5B%3Bvnd.vst.idref%3Dcover%5D!/4/2/2%4051:1
+
+Clean code https://integrada.minhabiblioteca.com.br/reader/books/9788550816043/pageid/0
+
 # Abstração e Complexidade 31/07
 É o ato de entender um problema real e representá-lo no código de forma simplificada, focando apenas nos aspectos essenciais para sua resolução.  Isso permite transformar situações do mundo real em estruturas lógicas e funcionais dentro do software, facilitando a construção de sistemas mais claros. Softwares são abstrações de um problema do mundo real, que tendem a serem complexos por esse motivo, e essa complexidade é um problema porque torna o sistema mais difícil de entender, manter e evoluir. Quanto mais complicado o código, mais difícil fica para os desenvolvedores entenderem como ele funciona, corrigirem erros, fazerem alterações com segurança e trabalharem em equipe.
 
@@ -22,7 +28,7 @@ Acontece por exemplo, ao esconder a implementação interna de uma função, cla
  O esperado de um código é que você possa remover uma parte do código e ainda assim fazer com que o sistema nao quebre, podendo evoluir no futuro o sistema sem que ele falhe.
 
 
-#Aula 04/08
+# Aula 04/08
 
 # Getters e Setters
  São encapsulamentos, e servem para proteger a informação.
@@ -32,3 +38,26 @@ manter uma única responsabilidade por classe ou até método, para fazer com qu
 
 # Acoplamento 
 É a força da conexão entre duas classes. Alto acoplamento é quando um grupo de classes é altamente dependente umas das outras. E algo com baixo acoplamento é quando os componentes de um sistema têm pouca ou nenhuma dependência um do outro. O ideal é nao ter um alto acoplamento, porque uma mudança em um componente pode exigir modificações em vários outros, dificultando a manutenção, a reutilização e os testes.
+
+Na engenharia de software o ideal é ter um software altamente coeso e com baixo acoplamento.
+
+# Aula 07/08
+
+# SOLID
+é programar orientado a objetos do jeito certo, usar da melhor forma que ela foi pensada para ser utilizada.
+Single Responsibility Principle: É uma aplicação direta da ideia da coesão, cada parte do seu codigo tem uma unica responsabilidade.
+
+Open/Closed Principle:
+
+Liskov Substitution Principle
+
+Interface Segregation Principle: Toda comunicação do sistema deveria ter uma interface e cada interface deveria ter uma única responsabilidade, como por exemplo se quiser ver os movimentos do mouse em um botão, teria uma interface para isso da mesma maneira que teria uma interface para os cliques no botão.
+
+Dependency Inversion Principle
+
+# importante
+Herança - reta com seta aberta
+Associação - reta com seta fechada 
+Interface - reta  vazada com seta aberta 
+
+
