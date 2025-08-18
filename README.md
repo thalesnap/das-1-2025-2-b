@@ -67,6 +67,8 @@ Interface - reta  vazada com seta aberta
 
 # Aula 18/08
 
+Singleton - É único, só pode haver um dele. A ideia dele é vc criar um ponto unico global de acesso, como se fosse uma variavel global, considerado hoje um anti-pattern.
+
 
 
 
