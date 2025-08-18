@@ -60,4 +60,13 @@ Herança - reta com seta aberta
 Associação - reta com seta fechada 
 Interface - reta  vazada com seta aberta 
 
+# Aula 14/08
+
+////
+
+
+# Aula 18/08
+
+
+
 
