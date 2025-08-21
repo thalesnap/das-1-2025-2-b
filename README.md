@@ -1,6 +1,7 @@
 # Design e Arquitetura de Software 1 - 2025/2 Turma B - Thales
 
 # Bibliografia
+https://refactoring.guru/design-patterns/observer
 https://engsoftmoderna.info/cap5.html
 https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/2%5B%3Bvnd.vst.idref%3Dcover%5D!/4/2/2%4051:1
 
