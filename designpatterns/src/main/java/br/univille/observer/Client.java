@@ -2,7 +2,7 @@ package br.univille.observer;
 
 public class Client {
     public static void main(String[] args) {
-        Publisher publisher = new Publisher();
+        var publisher = new Publisher();
 
         Subscriber s1 = new ConcreteSubscriber("Pedri");
         Subscriber s2 = new ConcreteSubscriber("Gavi");
