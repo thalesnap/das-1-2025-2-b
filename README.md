@@ -59,7 +59,7 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 
  - Associação → linha sólida, pode ter seta fechada indicando direção, mostra relacionamento entre classes.
 
- - Interface (realização/implementação) → linha tracejada/vazada com seta aberta apontando para a interface que está sendo implementada.
+ - Implementação → linha tracejada/vazada com seta aberta apontando para a interface que está sendo implementada.
 
 # Aula 14/08
 - SOLID
