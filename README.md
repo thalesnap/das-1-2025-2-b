@@ -1,4 +1,5 @@
-# Design e Arquitetura de Software 1 - 2025/2 Turma B - Thales
+# Design e Arquitetura de Software 1 - 2025/2 Turma B
+- Aluno: Thales Pedri
 
 # Bibliografia
 - Design patterns https://refactoring.guru/design-patterns/observer
