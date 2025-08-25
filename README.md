@@ -50,8 +50,6 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 
   - Open/Closed Principle: Classes, módulos e funções devem estar abertos para extensão, mas fechados para modificação, permitindo adicionar novas funcionalidades sem alterar o código existente.
 
-  - Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem quebrar o funcionamento do sistema, garantindo que subclasses preservem o comportamento esperado.
-
   - Interface Segregation Principle: Toda comunicação do sistema deveria ter uma interface e cada interface deveria ter uma única responsabilidade, como por exemplo se quiser ver os movimentos do mouse em um botão, teria uma interface para isso da mesma maneira que teria uma interface para os cliques no botão.
 
 - Dependency Inversion Principle: Módulos de alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações (interfaces), invertendo a dependência para tornar o código mais flexível e desacoplado.
