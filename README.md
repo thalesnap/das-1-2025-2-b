@@ -44,15 +44,15 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 # Aula 07/08
 
 - SOLID:
-é programar orientado a objetos do jeito certo, usar da melhor forma que ela foi pensada para ser utilizada.
+É programar orientado a objetos do jeito certo, usar da melhor forma que ela foi pensada para ser utilizada.
 
-- Single Responsibility Principle: É uma aplicação direta da ideia da coesão, cada parte do seu codigo tem uma unica responsabilidade, ou seja, uma razão para mudar.
+  - Single Responsibility Principle: É uma aplicação direta da ideia da coesão, cada parte do seu codigo tem uma unica responsabilidade, ou seja, uma razão para mudar.
 
-- Open/Closed Principle: Classes, módulos e funções devem estar abertos para extensão, mas fechados para modificação, permitindo adicionar novas funcionalidades sem alterar o código existente.
+  - Open/Closed Principle: Classes, módulos e funções devem estar abertos para extensão, mas fechados para modificação, permitindo adicionar novas funcionalidades sem alterar o código existente.
 
-- Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem quebrar o funcionamento do sistema, garantindo que subclasses preservem o comportamento esperado.
+  - Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem quebrar o funcionamento do sistema, garantindo que subclasses preservem o comportamento esperado.
 
-- Interface Segregation Principle: Toda comunicação do sistema deveria ter uma interface e cada interface deveria ter uma única responsabilidade, como por exemplo se quiser ver os movimentos do mouse em um botão, teria uma interface para isso da mesma maneira que teria uma interface para os cliques no botão.
+  - Interface Segregation Principle: Toda comunicação do sistema deveria ter uma interface e cada interface deveria ter uma única responsabilidade, como por exemplo se quiser ver os movimentos do mouse em um botão, teria uma interface para isso da mesma maneira que teria uma interface para os cliques no botão.
 
 - Dependency Inversion Principle: Módulos de alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações (interfaces), invertendo a dependência para tornar o código mais flexível e desacoplado.
 
@@ -64,16 +64,15 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
  - Interface (realização/implementação) → linha tracejada/vazada com seta aberta apontando para a interface que está sendo implementada.
 
 # Aula 14/08
-
-////
-
+- SOLID
+  - Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem quebrar o funcionamento do sistema, garantindo que subclasses preservem o comportamento esperado.
 
 # Aula 18/08
 
-Singleton: É único, só pode haver um dele. A ideia dele é vc criar um ponto unico global de acesso, como se fosse uma variavel global, considerado hoje um anti-pattern.
+- Singleton: É único, só pode haver um dele. A ideia dele é vc criar um ponto unico global de acesso, como se fosse uma variavel global, considerado hoje um anti-pattern.
 
 # Aula 21/08
-Observer:  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.
+- Observer:  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.
 
 
 
