@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Publisher {
     private ArrayList<Subscriber> subscribers = new ArrayList<>();
-    private String mainState;
+    String mainState;
 
 public void addSubscriber(Subscriber subscriber) {
         subscribers.add(subscriber);
@@ -24,11 +24,4 @@ public void addSubscriber(Subscriber subscriber) {
         this.mainState = mainState;
         notifySubscribers();
     }
-
-    public String getMainState() {
-        return mainState;
-    }
-
-    
-
 }
