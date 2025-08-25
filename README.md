@@ -57,9 +57,11 @@ Interface Segregation Principle: Toda comunicação do sistema deveria ter uma i
 Dependency Inversion Principle
 
 # importante
-Herança - reta com seta aberta
-Associação - reta com seta fechada 
-Interface - reta  vazada com seta aberta 
+ - Herança (generalização/especialização) → linha sólida com seta aberta apontando para a classe pai.
+
+ - Associação → linha sólida, pode ter seta fechada indicando direção, mostra relacionamento entre classes.
+
+ - Interface (realização/implementação) → linha tracejada/vazada com seta aberta apontando para a interface que está sendo implementada.
 
 # Aula 14/08
 
@@ -69,6 +71,9 @@ Interface - reta  vazada com seta aberta
 # Aula 18/08
 
 Singleton - É único, só pode haver um dele. A ideia dele é vc criar um ponto unico global de acesso, como se fosse uma variavel global, considerado hoje um anti-pattern.
+
+# Aula 21/08
+Observer -  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.
 
 
 
