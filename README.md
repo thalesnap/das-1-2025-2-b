@@ -67,7 +67,11 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 
 # Aula 18/08
 
-- Singleton: É único, só pode haver um dele. A ideia dele é vc criar um ponto unico global de acesso, como se fosse uma variavel global, considerado hoje um anti-pattern.
+- Singleton: É único, só pode haver um dele. A ideia dele é você criar um ponto único global de acesso, como se fosse uma variável global, considerado hoje um anti-pattern.  
+  O padrão Singleton garante que uma classe tenha apenas uma instância durante toda a execução do programa e fornece um método de acesso global a essa instância. É útil para gerenciar recursos compartilhados, como conexões com banco de dados ou configurações globais. No entanto, seu uso excessivo pode dificultar testes e aumentar o acoplamento do sistema, por isso deve ser aplicado com cautela.
 
 # Aula 21/08
-- Observer:  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.
+- Observer:  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.  
+  O padrão Observer é muito utilizado para implementar sistemas de eventos, como interfaces gráficas ou notificações. Ele permite que objetos "observadores" se registrem para receber atualizações de um "observado" (publisher), promovendo baixo acoplamento entre as partes do sistema. Assim, novas funcionalidades podem ser adicionadas facilmente apenas criando novos observadores, sem modificar o código
+
+
