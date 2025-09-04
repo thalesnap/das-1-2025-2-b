@@ -77,8 +77,8 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 
 # Aula 04/08
 - Resuma a diferença entre: Arquitetura e Design:
- - O arquiteto foca na estrutura e em como o sistema irá operar, o designer foca em implementar as soluções arquitetadas, devem trabalhar em conjunto para que não haja problemas de integração e comunicação.
+   - O arquiteto foca na estrutura e em como o sistema irá operar, o designer foca em implementar as soluções arquitetadas, devem trabalhar em conjunto para que não haja problemas de integração e comunicação.
 - Como é a formação do conhecimento de um arquiteto modelo T?
- - É quando o artquiteto tem uma profundidade técnica em algumas áreas específicas, sendo a perna do T vertical, mas o mais importante, possui amplitude técnica em várias áreas, que é a barra horizontal do T, permitindo-o entender o contexto geral do projeto e se comunicar, conectar e propor soluções para diferentes equipes do projeto.
+  - É quando o artquiteto tem uma profundidade técnica em algumas áreas específicas, sendo a perna do T vertical, mas o mais importante, possui amplitude técnica em várias áreas, que é a barra horizontal do T, permitindo-o entender o contexto geral do projeto e se comunicar, conectar e propor soluções para diferentes equipes do projeto.
 
 
