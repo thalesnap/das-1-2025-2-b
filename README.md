@@ -75,7 +75,7 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
   O padrão Observer é muito utilizado para implementar sistemas de eventos, como interfaces gráficas ou notificações. Ele permite que objetos "observadores" se registrem para receber atualizações de um "observado" (publisher), promovendo baixo acoplamento entre as partes do sistema. Assim, novas funcionalidades podem ser adicionadas facilmente apenas criando novos observadores, sem modificar o código.
 
 
-# Aula 04/08
+# Aula 04/09
 - Resuma a diferença entre: Arquitetura e Design:
    - O arquiteto foca na estrutura e em como o sistema irá operar, o designer foca em implementar as soluções arquitetadas, devem trabalhar em conjunto para que não haja problemas de integração e comunicação.
 - Como é a formação do conhecimento de um arquiteto modelo T?
