@@ -96,4 +96,7 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 - Como é a formação do conhecimento de um arquiteto modelo T?
   - É quando o artquiteto tem uma profundidade técnica em algumas áreas específicas, sendo a perna do T vertical, mas o mais importante, possui amplitude técnica em várias áreas, que é a barra horizontal do T, permitindo-o entender o contexto geral do projeto e se comunicar, conectar e propor soluções para diferentes equipes do projeto.
 
+# Aula 08/09
+- Analise de trade-offs
+  - processo de pesar prós e contras de cada decisão arquitetural para escolher a que melhor atende o sistema no determinado contexto.
 
