@@ -61,6 +61,14 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 
  - Implementação → linha tracejada/vazada com seta aberta apontando para a interface que está sendo implementada.
 
+# Aula 11/08
+- Herança: uma classe filha herda atributos e métodos da classe pai. Problema: cria forte acoplamento e pode gerar hierarquias rígidas.
+- Composição: em vez de herdar, você combina objetos, reutilizando comportamentos de outras classes.
+- Vantagem: dá mais flexibilidade, facilita mudanças e evita dependência desnecessária de uma hierarquia fixa.
+
+- Princípio de Demeter:
+  - Uma classe deve conhecer o mínimo possível de outras classes. Em vez de navegar em várias camadas de objetos, uma classe deve interagir apenas com seus colaboradores diretos. Isso reduz acoplamento e facilita a manutenção, porque mudanças em um objeto não se propagam tanto.
+    
 # Aula 14/08
 - SOLID
   - Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem quebrar o funcionamento do sistema, garantindo que subclasses preservem o comportamento esperado.
@@ -74,6 +82,13 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 - Observer:  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.  
   O padrão Observer é muito utilizado para implementar sistemas de eventos, como interfaces gráficas ou notificações. Ele permite que objetos "observadores" se registrem para receber atualizações de um "observado" (publisher), promovendo baixo acoplamento entre as partes do sistema. Assim, novas funcionalidades podem ser adicionadas facilmente apenas criando novos observadores, sem modificar o código.
 
+# Aula 01/09
+- Expectativa de um arquiteto:
+   - Ser responsável por decisões técnicas de longo prazo. Garantir que a arquitetura atenda requisitos funcionais e não funcionais apoiando a equipe e facilitando a comunicacao tecnica. Tambem espera que o arquiteto se mantenha atualizado acompanhando novas tecnologias, ferramentas e praticas, pois a arquitetura muda com o passar do tempo e novas necessidades. Alem de conhecer tecnologias, tambem deve conhecer o contexto e regras do negócio em que o software está inserido para que as decisoes implementadas tenham maior sucesso.
+- Decisões de arquitetura:
+  - São as escolhas sobre como o sistema será construído: tecnologias, frameworks, padrões de projeto, etc.
+ - DevOps
+   -  refere-se à substituição de operações e desenvolvimento em silos. A ideia é criar equipes multidisciplinares que agora trabalham em conjunto com práticas e ferramentas compartilhadas e eficientes, com o objetivo de entregar software de forma mais rápida, confiável e com feedback contínuo.
 
 # Aula 04/09
 - Resuma a diferença entre: Arquitetura e Design:
