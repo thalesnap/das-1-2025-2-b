@@ -68,10 +68,15 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 
 - Princípio de Demeter:
   - Uma classe deve conhecer o mínimo possível de outras classes. Em vez de navegar em várias camadas de objetos, uma classe deve interagir apenas com seus colaboradores diretos. Isso reduz acoplamento e facilita a manutenção, porque mudanças em um objeto não se propagam tanto.
+
     
 # Aula 14/08
 - SOLID
   - Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem quebrar o funcionamento do sistema, garantindo que subclasses preservem o comportamento esperado.
+
+  https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788577800469%2Fpageid%2F0&brand=integrada.minhabiblioteca.com.br
+  https://engsoftmoderna.info/cap6.html
+  https://refactoring.guru/design-patterns
 
 # Aula 18/08
 
@@ -82,6 +87,17 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
 - Observer:  É um padrão de projeto que define uma relação um-para-muitos entre objetos. Quando o objeto principal muda de estado, todos os objetos dependentes são notificados automaticamente.  
   O padrão Observer é muito utilizado para implementar sistemas de eventos, como interfaces gráficas ou notificações. Ele permite que objetos "observadores" se registrem para receber atualizações de um "observado" (publisher), promovendo baixo acoplamento entre as partes do sistema. Assim, novas funcionalidades podem ser adicionadas facilmente apenas criando novos observadores, sem modificar o código.
 
+  https://refactoring.guru/design-patterns/observer
+
+# Aula 25/08
+https://refactoring.guru/design-patterns/observer
+
+# Aula 28/08
+
+- a arquitetura é o esqueleto do software, guiada por princípios e materializada em decisões que garantem que o sistema atenda às suas características desejadas.
+
+https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F18%5B%253Bvnd.vst.idref%253Dcap1.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+
 # Aula 01/09
 - Expectativa de um arquiteto:
    - Ser responsável por decisões técnicas de longo prazo. Garantir que a arquitetura atenda requisitos funcionais e não funcionais apoiando a equipe e facilitando a comunicacao tecnica. Tambem espera que o arquiteto se mantenha atualizado acompanhando novas tecnologias, ferramentas e praticas, pois a arquitetura muda com o passar do tempo e novas necessidades. Alem de conhecer tecnologias, tambem deve conhecer o contexto e regras do negócio em que o software está inserido para que as decisoes implementadas tenham maior sucesso.
@@ -90,13 +106,22 @@ Na engenharia de software o ideal é ter um software altamente coeso e com baixo
  - DevOps
    -  refere-se à substituição de operações e desenvolvimento em silos. A ideia é criar equipes multidisciplinares que agora trabalham em conjunto com práticas e ferramentas compartilhadas e eficientes, com o objetivo de entregar software de forma mais rápida, confiável e com feedback contínuo.
 
+ integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/18%5B%3Bvnd.vst.idref%3Dcap1.xhtml%5D!/4
+
 # Aula 04/09
 - Resuma a diferença entre: Arquitetura e Design:
    - O arquiteto foca na estrutura e em como o sistema irá operar, o designer foca em implementar as soluções arquitetadas, devem trabalhar em conjunto para que não haja problemas de integração e comunicação.
 - Como é a formação do conhecimento de um arquiteto modelo T?
   - É quando o artquiteto tem uma profundidade técnica em algumas áreas específicas, sendo a perna do T vertical, mas o mais importante, possui amplitude técnica em várias áreas, que é a barra horizontal do T, permitindo-o entender o contexto geral do projeto e se comunicar, conectar e propor soluções para diferentes equipes do projeto.
 
-# Aula 08/09
+https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F22%5B%253Bvnd.vst.idref%253Dcap2.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+
+# Aula 08/09 e 11/09
+https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F22%5B%253Bvnd.vst.idref%253Dcap2.xhtml%5D%21%2F4%2F2%2F58%5Bsigil_toc_id_24%5D%2F1%3A22%5B-of%252Cfs%5D&brand=integrada.minhabiblioteca.com.br
+
 - Analise de trade-offs
   - processo de pesar prós e contras de cada decisão arquitetural para escolher a que melhor atende o sistema no determinado contexto.
+
+# Aula 15/09 e 18/09
+Implementação do publisher e subscriber (tópico) no codigo.
 
