@@ -125,3 +125,14 @@ https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabibliot
 # Aula 15/09 e 18/09
 Implementação do publisher e subscriber (tópico) no codigo.
 
+# 2 BIMESTRE
+# Aula 06/10
+https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F26%5B%253Bvnd.vst.idref%253Dcap4.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+  -
+
+
+# Aula 09/10
+ - Circuit Breaker
+ ![alt text](image.png)
+
+
