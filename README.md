@@ -137,21 +137,21 @@ https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabibliot
    - Disponibilidade: Medida de quanto tempo o sistema está operacional e acessível aos usuários. Sistemas altamente disponíveis utilizam técnicas como redundância e failover automático para minimizar períodos de inatividade.
    - Confiabilidade: Capacidade do sistema de funcionar corretamente e sem falhas durante um determinado período. Uma arquitetura confiável prevê mecanismos de tolerância a falhas e recuperação automática.
    
- - Características Estruturais da Arquitetura
+- Características Estruturais da Arquitetura
   - São aspectos relacionados à organização interna do sistema, como modularidade, coesão, acoplamento e separação de preocupações.
    - Modularidade: Refere-se à divisão do sistema em módulos independentes, cada um com responsabilidade única. Uma boa modularidade facilita manutenção, testes e evolução do sistema.
    - Coesão: Mede o quanto os elementos dentro de um módulo estão relacionados entre si. Alta coesão significa que o módulo tem uma única responsabilidade bem definida.
    - Acoplamento: Refere-se ao grau de interdependência entre módulos. Baixo acoplamento é desejável, pois facilita mudanças em um módulo sem afetar outros.
    - Separação de preocupações: Princípio que sugere dividir o sistema em partes que tratam de preocupações diferentes, como regras de negócio, interface e persistência. Isso melhora a organização e clareza do código.
    
- - Características Transversais da Arquitetura
- - São aspectos que afetam toda a aplicação, como segurança, monitoramento, tratamento de erros e conformidade.
+- Características Transversais da Arquitetura
+  - São aspectos que afetam toda a aplicação, como segurança, monitoramento, tratamento de erros e conformidade.
    - Segurança: Envolve proteger o sistema contra acessos não autorizados, vazamentos de dados e ataques. Uma boa arquitetura incorpora mecanismos de autenticação, autorização e criptografia desde o início.
    - Monitoramento: Capacidade de observar o comportamento do sistema em tempo real, coletando métricas e logs para identificar problemas e otimizar o desempenho.
    - Tratamento de Erros: Estratégias para lidar com falhas de forma优雅 e controlada, garantindo que o sistema continue funcionando mesmo diante de falhas.
    - conformidade: refere-se à aderência a normas, regulamentos e políticas aplicáveis ao sistema, como leis de privacidade (ex: LGPD) ou padrões de indústria. A arquitetura deve suportar mecanismos para garantir conformidade desde o início do desenvolvimento.
    
-  - Arquitetura Menos Pior
+- Arquitetura Menos Pior
    - A"Arquitetura Menos Pior" é uma abordagem pragmática onde, diante de várias opções ruins, escolhe-se a que cause menor impacto negativo ao sistema no contexto específico. Em vez de buscar a solução perfeita (muitas vezes inviável), busca-se a menos problemática, considerando restrições reais como tempo, orçamento e tecnologia disponível.
   
 # Aula 09/10
