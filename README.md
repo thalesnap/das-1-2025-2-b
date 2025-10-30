@@ -157,10 +157,10 @@ https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabibliot
 # Aula 09/10
 https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/26%5B%3Bvnd.vst.idref%3Dcap4.xhtml%5D!/4
 
- - Circuit Breaker
+- Circuit Breaker
   - O padrão Circuit Breaker é usado para lidar com falhas temporárias em serviços externos, evitando chamadas repetidas a um serviço que está com problemas. Ele funciona como um disjuntor: quando detecta várias falhas consecutivas, "abre o circuito" e impede chamadas futuras por um tempo. Após esse período, ele entra em um estado de "meio aberto" para testar se o serviço voltou ao normal.
     Ele ajuda a melhorar a resiliência e estabilidade de um sistema distribuído, evitando sobrecarga em serviços já comprometidos.
-   - ![alt text](image.png)
+    ![alt text](image.png)
 
 
 # Aula 13/10
@@ -168,6 +168,18 @@ https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
 
 - CQRS (Command Query Responsibility Segregation)
   - O padrão CQRS propõe a separação das operações de leitura (Query) e escrita (Command) em modelos diferentes, permitindo otimizar cada uma de forma independente. Isso é especialmente útil em sistemas complexos onde as necessidades de leitura e gravação são distintas. Com isso, podemos ter modelos de dados otimizados para consulta e outros para persistência, melhorando desempenho, escalabilidade e manutenibilidade, um dos pontos negativos é ler o mesmo dado em dois lugares diferentes, o que pode gerar inconsistências se não for bem implementado.
+
+# Aula 16/10
+- https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+  - Retry Pattern
+
+- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fapp.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F38%5B%253Bvnd.vst.idref%253Dcap9.xhtml%5D%21%2F4&brand=app.minhabiblioteca.com.br
+
+# Aula 20/10 e 23/10
+
+- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fapp.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F40%5B%253Bvnd.vst.idref%253Dcap10.xhtml%5D%21%2F4&brand=app.minhabiblioteca.com.br
+
+
   
   
 
