@@ -180,6 +180,20 @@ https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
 - https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fapp.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F40%5B%253Bvnd.vst.idref%253Dcap10.xhtml%5D%21%2F4&brand=app.minhabiblioteca.com.br
 
 
+# Aula 27/10 e 30/10
+
+- https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4
+
+
+# Aula 03/11 e 06/11
+
+- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F44%5B%253Bvnd.vst.idref%253Dcap12.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+
+# Aula 10/11 e 13/11
+
+- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F54%5B%253Bvnd.vst.idref%253Dcap17.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+
+
   
   
 
