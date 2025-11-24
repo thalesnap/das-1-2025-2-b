@@ -253,42 +253,42 @@ Arquitetura Pipeline
 
 Como Funciona
 
-• A aplicação é organizada em filtros conectados por canais (pipes).
-• Cada canal é unidirecional e normalmente ponto a ponto.
-• Cada filtro é autônomo, simples e geralmente sem estado.
-• O fluxo segue um caminho linear: Produtor → Transformações/Verificações → Consumidor.
-• A composição encoraja modularidade, substituição simples e reuso.
+ - A aplicação é organizada em filtros conectados por canais (pipes).
+ - Cada canal é unidirecional e normalmente ponto a ponto.
+ - Cada filtro é autônomo, simples e geralmente sem estado.
+ - O fluxo segue um caminho linear: Produtor → Transformações/Verificações → Consumidor.
+ - A composição encoraja modularidade, substituição simples e reuso.
 
 Tipos de Filtros
 
-• Produtor — Origem do pipeline; somente saída.
-• Transformador — Processa/transforma dados e encaminha ao próximo filtro (equivalente ao map).
-• Verificador — Testa condições e decide se produz saída (similar a reduce ou filtro condicional).
-• Consumidor — Última etapa; persiste ou exibe o resultado final.
+ - Produtor — Origem do pipeline; somente saída.
+ - Transformador — Processa/transforma dados e encaminha ao próximo filtro (equivalente ao map).
+ - Verificador — Testa condições e decide se produz saída (similar a reduce ou filtro condicional).
+ - Consumidor — Última etapa; persiste ou exibe o resultado final.
 
 Benefícios
 
-• Alta modularidade e facilidade de composição
-• Baixa complexidade arquitetural
-• Código simples, fácil de entender e manter
-• Permite substituição de filtros sem afetar o restante
-• Ótimo para fluxos lineares de dados: ETL, processamento de logs, telemetria, transformações etc.
+ - Alta modularidade e facilidade de composição.
+ - Baixa complexidade arquitetural.
+ - Código simples, fácil de entender e manter.
+ - Permite substituição de filtros sem afetar o restante.
+ - Ótimo para fluxos lineares de dados: ETL, processamento de logs, telemetria, transformações etc.
 
 Limitações
 
-• Geralmente implementado como monolito, dificultando elasticidade
-• Baixa escalabilidade horizontal (exige técnicas complexas para paralelismo)
-• Sem tolerância a falhas isoladas — qualquer falha afeta o pipeline inteiro
-• Testabilidade e deploy exigem validar todo o pipeline
-• Disponibilidade menor devido a reinicializações completas do monolito
+ - Geralmente implementado como monolito, dificultando elasticidade.
+ - Baixa escalabilidade horizontal (exige técnicas complexas para paralelismo).
+ - Sem tolerância a falhas isoladas, qualquer falha afeta o pipeline inteiro.
+ - Testabilidade e deploy exigem validar todo o pipeline.
+ - Disponibilidade menor devido a reinicializações completas do monolito.
 
 Quando Usar
 
-• Processamento linear e sequencial de dados
-• ETL, EDI, transformações de arquivos e fluxos de telemetria
-• Processos com etapas bem definidas e independentes entre si
-• Sistemas que se beneficiam de filtros pequenos, reutilizáveis e combináveis
-• Quando simplicidade, baixo custo e modularidade são prioridades
+ - Processamento linear e sequencial de dados.
+ - ETL, EDI, transformações de arquivos e fluxos de telemetria.
+ - Processos com etapas bem definidas e independentes entre si.
+ - Sistemas que se beneficiam de filtros pequenos, reutilizáveis e combináveis.
+ - Quando simplicidade, baixo custo e modularidade são prioridades.
 
 
 # Aula 03/11 e 06/11
