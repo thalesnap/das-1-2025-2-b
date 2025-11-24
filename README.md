@@ -130,34 +130,34 @@ Implementação do publisher e subscriber (tópico) no codigo.
 # Aula 06/10
 [Fundamentos Arquitetura](https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F26%5B%253Bvnd.vst.idref%253Dcap4.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br)
 
-- Características Operacionais da Arquitetura
+Características Operacionais da Arquitetura
   - São aspectos relacionados ao comportamento do sistema em tempo de execução, como desempenho, escalabilidade, disponibilidade e confiabilidade.
    - Desempenho: Refere-se à rapidez com que o sistema responde às solicitações dos usuários. Uma boa arquitetura busca minimizar latência e maximizar throughput (quantidade de operações por segundo).
    - Escalabilidade: Capacidade do sistema de crescer e se adaptar ao aumento de carga, seja horizontalmente (adicionando mais máquinas) ou verticalmente (aumentando recursos de uma máquina).
    - Disponibilidade: Medida de quanto tempo o sistema está operacional e acessível aos usuários. Sistemas altamente disponíveis utilizam técnicas como redundância e failover automático para minimizar períodos de inatividade.
    - Confiabilidade: Capacidade do sistema de funcionar corretamente e sem falhas durante um determinado período. Uma arquitetura confiável prevê mecanismos de tolerância a falhas e recuperação automática.
    
-- Características Estruturais da Arquitetura
+Características Estruturais da Arquitetura
   - São aspectos relacionados à organização interna do sistema, como modularidade, coesão, acoplamento e separação de preocupações.
    - Modularidade: Refere-se à divisão do sistema em módulos independentes, cada um com responsabilidade única. Uma boa modularidade facilita manutenção, testes e evolução do sistema.
    - Coesão: Mede o quanto os elementos dentro de um módulo estão relacionados entre si. Alta coesão significa que o módulo tem uma única responsabilidade bem definida.
    - Acoplamento: Refere-se ao grau de interdependência entre módulos. Baixo acoplamento é desejável, pois facilita mudanças em um módulo sem afetar outros.
    - Separação de preocupações: Princípio que sugere dividir o sistema em partes que tratam de preocupações diferentes, como regras de negócio, interface e persistência. Isso melhora a organização e clareza do código.
    
-- Características Transversais da Arquitetura
+Características Transversais da Arquitetura
   - São aspectos que afetam toda a aplicação, como segurança, monitoramento, tratamento de erros e conformidade.
    - Segurança: Envolve proteger o sistema contra acessos não autorizados, vazamentos de dados e ataques. Uma boa arquitetura incorpora mecanismos de autenticação, autorização e criptografia desde o início.
    - Monitoramento: Capacidade de observar o comportamento do sistema em tempo real, coletando métricas e logs para identificar problemas e otimizar o desempenho.
    - Tratamento de Erros: Estratégias para lidar com falhas de forma优雅 e controlada, garantindo que o sistema continue funcionando mesmo diante de falhas.
    - conformidade: refere-se à aderência a normas, regulamentos e políticas aplicáveis ao sistema, como leis de privacidade (ex: LGPD) ou padrões de indústria. A arquitetura deve suportar mecanismos para garantir conformidade desde o início do desenvolvimento.
    
-- Arquitetura Menos Pior
+Arquitetura Menos Pior
    - A"Arquitetura Menos Pior" é uma abordagem pragmática onde, diante de várias opções ruins, escolhe-se a que cause menor impacto negativo ao sistema no contexto específico. Em vez de buscar a solução perfeita (muitas vezes inviável), busca-se a menos problemática, considerando restrições reais como tempo, orçamento e tecnologia disponível.
   
 # Aula 09/10
 [Circuit Breaker](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/26%5B%3Bvnd.vst.idref%3Dcap4.xhtml%5D!/4)
 
-- Circuit Breaker
+Circuit Breaker
   - O padrão Circuit Breaker é usado para lidar com falhas temporárias em serviços externos, evitando chamadas repetidas a um serviço que está com problemas. Ele funciona como um disjuntor: quando detecta várias falhas consecutivas, "abre o circuito" e impede chamadas futuras por um tempo. Após esse período, ele entra em um estado de "meio aberto" para testar se o serviço voltou ao normal.
     Ele ajuda a melhorar a resiliência e estabilidade de um sistema distribuído, evitando sobrecarga em serviços já comprometidos.
     ![alt text](image.png)
@@ -166,17 +166,17 @@ Implementação do publisher e subscriber (tópico) no codigo.
 # Aula 13/10
 [CQRS](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
 
-- CQRS (Command Query Responsibility Segregation)
-  - O padrão CQRS propõe a separação das operações de leitura (Query) e escrita (Command) em modelos diferentes, permitindo otimizar cada uma de forma independente. Isso é especialmente útil em sistemas complexos onde as necessidades de leitura e gravação são distintas. Com isso, podemos ter modelos de dados otimizados para consulta e outros para persistência, melhorando desempenho, escalabilidade e manutenibilidade, um dos pontos negativos é ler o mesmo dado em dois lugares diferentes, o que pode gerar inconsistências se não for bem implementado.
+CQRS (Command Query Responsibility Segregation)
+ - O padrão CQRS propõe a separação das operações de leitura (Query) e escrita (Command) em modelos diferentes, permitindo otimizar cada uma de forma independente. Isso é especialmente útil em sistemas complexos onde as necessidades de leitura e gravação são distintas. Com isso, podemos ter modelos de dados otimizados para consulta e outros para persistência, melhorando desempenho, escalabilidade e manutenibilidade, um dos pontos negativos é ler o mesmo dado em dois lugares diferentes, o que pode gerar inconsistências se não for bem implementado.
 
 # Aula 16/10
 
 [Retry](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
 
-  - Retry Pattern
-    - Criado para que as aplicações lidem melhor com falhas transitórias, falhas temporárias que acontecem ao acessar serviços remotos, banco de dados ou recursos de redes. A ideia é tentar de novo depois de esperar um pouco de tempo, ao invés de falhar imediatamente.
+Retry Pattern
+  - Criado para que as aplicações lidem melhor com falhas transitórias, falhas temporárias que acontecem ao acessar serviços remotos, banco de dados ou recursos de redes. A ideia é tentar de novo depois de esperar um pouco de tempo, ao invés de falhar imediatamente.
 
-  -Estratégias de Retry
+Estratégias de Retry
 
 • Cancelar
 
@@ -201,10 +201,10 @@ Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 # Aula 20/10 e 23/10
 [Estilo Arquitetura em Camadas](https://app.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/40%5B%3Bvnd.vst.idref%3Dcap10.xhtml%5D!/4)
 
-- Arquitetura em Camadas
+Arquitetura em Camadas
  - A arquitetura em camadas organiza a aplicação em níveis lógicos separados, onde cada camada possui responsabilidades específicas (ex.: apresentação, negócio, persistência e banco de dados). É um dos estilos mais usados devido à simplicidade, baixo custo e familiaridade com os times de desenvolvimento.
 
-- Como Funciona
+Como Funciona
 
  • Componentes são organizados em camadas horizontais.
 
@@ -214,7 +214,7 @@ Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 
  • Promove separação de responsabilidades e isolamento entre camadas.
 
-- Benefícios
+Benefícios
 
  •Simples de entender e implementar
 
@@ -224,7 +224,7 @@ Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 
  • Facilita equipes especializadas (UI, backend, DBA etc.)
 
-- Limitações
+Limitações
 
  • Menos ágil para mudanças (tudo se espalha por múltiplas camadas)
 
@@ -234,7 +234,7 @@ Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 
  • Não é ideal para sistemas grandes ou altamente modulares
 
-- Quando Usar
+Quando Usar
 
  • Aplicações pequenas ou médias
 
@@ -248,9 +248,8 @@ Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 # Aula 27/10 e 30/10
 [Estilo Arquitetura em Pipeline](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4)
 
-Arquitetura Pipeline (Pipes and Filters)
-
-A arquitetura Pipeline divide a aplicação em uma sequência de filtros independentes conectados por canais unidirecionais. Cada filtro executa uma tarefa isolada e envia o resultado para o próximo, permitindo composições simples, reutilizáveis e altamente modulares. É amplamente usada em shells Unix (Bash, Zsh), em modelos funcionais (Map/Reduce) e em ferramentas ETL/EDI.
+Arquitetura Pipeline
+ - A arquitetura Pipeline divide a aplicação em uma sequência de filtros independentes conectados por canais unidirecionais. Cada filtro executa uma tarefa isolada e envia o resultado para o próximo, permitindo composições simples, reutilizáveis e altamente modulares. É amplamente usada em shells Unix (Bash, Zsh), em modelos funcionais (Map/Reduce) e em ferramentas ETL/EDI.
 
 Como Funciona
 
@@ -295,8 +294,6 @@ Quando Usar
 # Aula 03/11 e 06/11
 [Estilo de Arquitetura Microkernel](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/44[%3Bvnd.vst.idref%3Dcap12.xhtml]!/4/2/2/1:0[%2CCAP])
 
- Arquitetura Microkernel
-
 A Arquitetura Microkernel separa o sistema em duas partes:
 
 1. Core System (Microkernel) — oferece o mínimo necessário para o sistema funcionar.
@@ -305,7 +302,7 @@ A Arquitetura Microkernel separa o sistema em duas partes:
 
 Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis e que exigem evolução rápida sem mexer no core.
 
- Como Funciona
+Como Funciona
 
  • O núcleo contém apenas funcionalidades essenciais.
 
@@ -315,7 +312,7 @@ Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis
 
  • Os plugins podem ser ativados, desativados, atualizados ou substituídos sem impactar o núcleo.
 
- Componentes
+Componentes
 
  • Microkernel (Core System)
    Responsável apenas pelo básico: comunicação, ciclo de vida dos plugins e serviços mínimos.
@@ -326,7 +323,7 @@ Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis
  • Plugins Externos
    Implementam funções específicas, regras de negócio ou recursos opcionais.
 
- Benefícios
+Benefícios
 
  • Extensível e modular
 
@@ -338,7 +335,7 @@ Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis
 
  • Ótimo para produtos que precisam evoluir continuamente
 
- Limitações
+Limitações
 
  • Pode aumentar a complexidade de comunicação entre módulos.
 
@@ -348,7 +345,7 @@ Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis
 
  • Performance pode ser afetada se houver excesso de chamadas entre core e plugins.
 
- Quando Usar
+Quando Usar
 
  • Sistemas que precisam ser altamente configuráveis.
 
@@ -361,60 +358,48 @@ Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis
 # Aula 10/11 e 13/11
 [Estilo de Arquitetura Microsserviços](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/54%5B%3Bvnd.vst.idref%3Dcap17.xhtml%5D!/4)
 
-A arquitetura Microkernel separa um núcleo mínimo e estável (kernel) responsável pelas funcionalidades essenciais, enquanto todas as demais capacidades são entregues por plugins, que podem ser adicionados, removidos ou modificados sem afetar o núcleo.
-É muito utilizada em sistemas que precisam ser altamente configuráveis, plugáveis e extensíveis.
+Arquitetura de Microsserviços
+ - Os microsserviços dividem a aplicação em serviços pequenos, independentes e especializados, cada um responsável por um domínio específico (ex.: usuários, pagamentos, catálogo). Cada serviço roda isolado, tem seu próprio banco de dados e pode ser desenvolvido, escalado e implantado de forma autônoma.
 
 Como Funciona
 
- • Estrutura dividida em:
+ - Sistema construído como vários serviços pequenos.
 
-   • Microkernel (núcleo): contém o mínimo necessário para o sistema funcionar.
+ - Independentes em código, deploy e banco de dados.
 
-   • Serviços internos: funcionalidades essenciais ligadas ao núcleo.
+ - Comunicação via APIs sincronas (REST/gRPC) ou eventos (Kafka, RabbitMQ).
 
-   • Plugins: módulos externos que adicionam ou modificam comportamentos.
-
- • Cada plugin pode operar de forma independente.
-
- • O microkernel coordena a comunicação entre os plugins e o sistema principal.
-
- • Ideal para aplicações que precisam ser adaptadas enquanto estão em operação.
+ - Cada serviço representa um Contexto Delimitado (DDD) — um domínio próprio.
 
 Benefícios
 
- • Extensibilidade: fácil adicionar novas funções sem alterar o núcleo.
+ - Alta escalabilidade e resiliência.
 
- • Alta modularidade: cada funcionalidade é um plugin isolado.
+ - Deploys rápidos e independentes.
 
- • Boa manutenção: alterar um plugin não afeta os outros.
+ - Times podem trabalhar em serviços separados.
 
- • Possibilidade de hot-swap: plugins podem ser atualizados em execução.
+ - Cada serviço usa a tecnologia e banco mais adequados.
 
- • Baixo risco de impacto: erros em plugins não quebram o núcleo.
+Desafios
 
-Limitações
+ - Mais complexidade operacional.
 
- • Maior complexidade inicial
+ - Dados distribuídos e replicação exigem cuidado.
 
- • Custos mais altos de design
+ - Latência maior por comunicação via rede.
 
- • Comunicação entre núcleo e plugins pode ser lenta
-
- • Difícil de projetar corretamente a fronteira entre kernel e plugins
-
- • Não indicado para sistemas pequenos ou simples
+ - Exige monitoramento, logs, service mesh e automação robusta.
 
 Quando Usar
 
- • Sistemas altamente configuráveis ou que exigem customização pesada.
+ - Sistemas grandes e em crescimento.
 
- • Aplicações com necessidade de carregar/extender funcionalidades via plugins.
+ - Equipes múltiplas que trabalham em paralelo.
 
- • Produtos que servem muitos clientes diferentes (ex.: ferramentas IDE).
+ - Necessidade de escalabilidade e disponibilidade altas.
 
- • Plataformas que exijam atualizações independentes de módulos.
-
- • Quando se espera evolução contínua da aplicação ao longo do tempo.
+ - Plataformas que precisam evoluir rápido sem parar o sistema.
 
 
   
