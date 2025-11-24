@@ -176,7 +176,8 @@ Implementação do publisher e subscriber (tópico) no codigo.
   - Retry Pattern
     - Criado para que as aplicações lidem melhor com falhas transitórias, falhas temporárias que acontecem ao acessar serviços remotos, banco de dados ou recursos de redes. A ideia é tentar de novo depois de esperar um pouco de tempo, ao invés de falhar imediatamente.
 
-    Estratégias de Retry
+  -Estratégias de Retry
+
 • Cancelar
 
 Interrompe imediatamente quando a falha não é transitória.
@@ -200,16 +201,220 @@ Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 # Aula 20/10 e 23/10
 [Estilo Arquitetura em Camadas](https://app.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/40%5B%3Bvnd.vst.idref%3Dcap10.xhtml%5D!/4)
 
+- Arquitetura em Camadas
+ - A arquitetura em camadas organiza a aplicação em níveis lógicos separados, onde cada camada possui responsabilidades específicas (ex.: apresentação, negócio, persistência e banco de dados). É um dos estilos mais usados devido à simplicidade, baixo custo e familiaridade com os times de desenvolvimento.
+
+- Como Funciona
+
+ • Componentes são organizados em camadas horizontais.
+
+ • Cada camada só trata das responsabilidades do seu nível.
+
+ • A comunicação ocorre de forma sequencial (apresentação → negócio → persistência → banco).
+
+ • Promove separação de responsabilidades e isolamento entre camadas.
+
+- Benefícios
+
+ •Simples de entender e implementar
+
+ • Baixo custo inicial
+
+ • Boa organização técnica
+
+ • Facilita equipes especializadas (UI, backend, DBA etc.)
+
+- Limitações
+
+ • Menos ágil para mudanças (tudo se espalha por múltiplas camadas)
+
+ • Pode gerar alto acoplamento se mal projetada
+
+ • Pode sofrer com o antipadrão sinkhole (requisições que passam por várias camadas sem lógica real)
+
+ • Não é ideal para sistemas grandes ou altamente modulares
+
+- Quando Usar
+
+ • Aplicações pequenas ou médias
+
+ • Projetos com pouco tempo ou orçamento
+
+ • Quando ainda não foi definido um estilo arquitetural mais avançado
+
+ • Como ponto de partida para evoluir depois para arquiteturas mais modulares
+
 
 # Aula 27/10 e 30/10
 [Estilo Arquitetura em Pipeline](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4)
 
+Arquitetura Pipeline (Pipes and Filters)
+
+A arquitetura Pipeline divide a aplicação em uma sequência de filtros independentes conectados por canais unidirecionais. Cada filtro executa uma tarefa isolada e envia o resultado para o próximo, permitindo composições simples, reutilizáveis e altamente modulares. É amplamente usada em shells Unix (Bash, Zsh), em modelos funcionais (Map/Reduce) e em ferramentas ETL/EDI.
+
+Como Funciona
+
+• A aplicação é organizada em filtros conectados por canais (pipes).
+• Cada canal é unidirecional e normalmente ponto a ponto.
+• Cada filtro é autônomo, simples e geralmente sem estado.
+• O fluxo segue um caminho linear: Produtor → Transformações/Verificações → Consumidor.
+• A composição encoraja modularidade, substituição simples e reuso.
+
+Tipos de Filtros
+
+• Produtor — Origem do pipeline; somente saída.
+• Transformador — Processa/transforma dados e encaminha ao próximo filtro (equivalente ao map).
+• Verificador — Testa condições e decide se produz saída (similar a reduce ou filtro condicional).
+• Consumidor — Última etapa; persiste ou exibe o resultado final.
+
+Benefícios
+
+• Alta modularidade e facilidade de composição
+• Baixa complexidade arquitetural
+• Código simples, fácil de entender e manter
+• Permite substituição de filtros sem afetar o restante
+• Ótimo para fluxos lineares de dados: ETL, processamento de logs, telemetria, transformações etc.
+
+Limitações
+
+• Geralmente implementado como monolito, dificultando elasticidade
+• Baixa escalabilidade horizontal (exige técnicas complexas para paralelismo)
+• Sem tolerância a falhas isoladas — qualquer falha afeta o pipeline inteiro
+• Testabilidade e deploy exigem validar todo o pipeline
+• Disponibilidade menor devido a reinicializações completas do monolito
+
+Quando Usar
+
+• Processamento linear e sequencial de dados
+• ETL, EDI, transformações de arquivos e fluxos de telemetria
+• Processos com etapas bem definidas e independentes entre si
+• Sistemas que se beneficiam de filtros pequenos, reutilizáveis e combináveis
+• Quando simplicidade, baixo custo e modularidade são prioridades
+
 
 # Aula 03/11 e 06/11
-[Estilo de Arquitetura Microkernel](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4)
+[Estilo de Arquitetura Microkernel](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/44[%3Bvnd.vst.idref%3Dcap12.xhtml]!/4/2/2/1:0[%2CCAP])
+
+ Arquitetura Microkernel
+
+A Arquitetura Microkernel separa o sistema em duas partes:
+
+1. Core System (Microkernel) — oferece o mínimo necessário para o sistema funcionar.
+
+2. Plugins (Módulos/Serviços externos) — adicionam funcionalidades específicas sem alterar o núcleo.
+
+Esse estilo é ideal para sistemas que precisam ser extensíveis, configuráveis e que exigem evolução rápida sem mexer no core.
+
+ Como Funciona
+
+ • O núcleo contém apenas funcionalidades essenciais.
+
+ • Todas as funcionalidades adicionais são implementadas como plugins independentes.
+
+ • O sistema usa mecanismos de comunicação entre o microkernel e os plugins.
+
+ • Os plugins podem ser ativados, desativados, atualizados ou substituídos sem impactar o núcleo.
+
+ Componentes
+
+ • Microkernel (Core System)
+   Responsável apenas pelo básico: comunicação, ciclo de vida dos plugins e serviços mínimos.
+
+ • Plugins Internos
+   Adicionam funcionalidades que estendem o core, mas ainda são “próximos” do núcleo.
+
+ • Plugins Externos
+   Implementam funções específicas, regras de negócio ou recursos opcionais.
+
+ Benefícios
+
+ • Extensível e modular
+
+ • Atualizações rápidas sem mexer no sistema inteiro
+
+ • Alta flexibilidade para adicionar novas funcionalidades
+
+ • Boa separação de responsabilidades
+
+ • Ótimo para produtos que precisam evoluir continuamente
+
+ Limitações
+
+ • Pode aumentar a complexidade de comunicação entre módulos.
+
+ • Necessita um design cuidadoso para evitar acoplamento entre plugins.
+
+ • Testes podem ser mais complexos devido às interações com o núcleo.
+
+ • Performance pode ser afetada se houver excesso de chamadas entre core e plugins.
+
+ Quando Usar
+
+ • Sistemas que precisam ser altamente configuráveis.
+
+ • Plataformas que exigem plugins (ex.: IDEs, mecanismos de workflows, middleware).
+
+ • Produtos que envolvem múltiplos clientes com necessidades diferentes.
+
+ • Aplicações que evoluirão rapidamente com adaptações constantes.
 
 # Aula 10/11 e 13/11
-[Estilo de Arquitetura Microsserviços](integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/54%5B%3Bvnd.vst.idref%3Dcap17.xhtml%5D!/4)
+[Estilo de Arquitetura Microsserviços](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/54%5B%3Bvnd.vst.idref%3Dcap17.xhtml%5D!/4)
+
+A arquitetura Microkernel separa um núcleo mínimo e estável (kernel) responsável pelas funcionalidades essenciais, enquanto todas as demais capacidades são entregues por plugins, que podem ser adicionados, removidos ou modificados sem afetar o núcleo.
+É muito utilizada em sistemas que precisam ser altamente configuráveis, plugáveis e extensíveis.
+
+Como Funciona
+
+ • Estrutura dividida em:
+
+   • Microkernel (núcleo): contém o mínimo necessário para o sistema funcionar.
+
+   • Serviços internos: funcionalidades essenciais ligadas ao núcleo.
+
+   • Plugins: módulos externos que adicionam ou modificam comportamentos.
+
+ • Cada plugin pode operar de forma independente.
+
+ • O microkernel coordena a comunicação entre os plugins e o sistema principal.
+
+ • Ideal para aplicações que precisam ser adaptadas enquanto estão em operação.
+
+Benefícios
+
+ • Extensibilidade: fácil adicionar novas funções sem alterar o núcleo.
+
+ • Alta modularidade: cada funcionalidade é um plugin isolado.
+
+ • Boa manutenção: alterar um plugin não afeta os outros.
+
+ • Possibilidade de hot-swap: plugins podem ser atualizados em execução.
+
+ • Baixo risco de impacto: erros em plugins não quebram o núcleo.
+
+Limitações
+
+ • Maior complexidade inicial
+
+ • Custos mais altos de design
+
+ • Comunicação entre núcleo e plugins pode ser lenta
+
+ • Difícil de projetar corretamente a fronteira entre kernel e plugins
+
+ • Não indicado para sistemas pequenos ou simples
+
+Quando Usar
+
+ • Sistemas altamente configuráveis ou que exigem customização pesada.
+
+ • Aplicações com necessidade de carregar/extender funcionalidades via plugins.
+
+ • Produtos que servem muitos clientes diferentes (ex.: ferramentas IDE).
+
+ • Plataformas que exijam atualizações independentes de módulos.
+
+ • Quando se espera evolução contínua da aplicação ao longo do tempo.
 
 
   
