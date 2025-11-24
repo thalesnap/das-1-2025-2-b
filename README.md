@@ -128,7 +128,7 @@ Implementação do publisher e subscriber (tópico) no codigo.
 # 2 BIMESTRE
 
 # Aula 06/10
-https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F26%5B%253Bvnd.vst.idref%253Dcap4.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+[Fundamentos Arquitetura](https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F26%5B%253Bvnd.vst.idref%253Dcap4.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br)
 
 - Características Operacionais da Arquitetura
   - São aspectos relacionados ao comportamento do sistema em tempo de execução, como desempenho, escalabilidade, disponibilidade e confiabilidade.
@@ -155,7 +155,7 @@ https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabibliot
    - A"Arquitetura Menos Pior" é uma abordagem pragmática onde, diante de várias opções ruins, escolhe-se a que cause menor impacto negativo ao sistema no contexto específico. Em vez de buscar a solução perfeita (muitas vezes inviável), busca-se a menos problemática, considerando restrições reais como tempo, orçamento e tecnologia disponível.
   
 # Aula 09/10
-https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/26%5B%3Bvnd.vst.idref%3Dcap4.xhtml%5D!/4
+[Circuit Breaker](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/26%5B%3Bvnd.vst.idref%3Dcap4.xhtml%5D!/4)
 
 - Circuit Breaker
   - O padrão Circuit Breaker é usado para lidar com falhas temporárias em serviços externos, evitando chamadas repetidas a um serviço que está com problemas. Ele funciona como um disjuntor: quando detecta várias falhas consecutivas, "abre o circuito" e impede chamadas futuras por um tempo. Após esse período, ele entra em um estado de "meio aberto" para testar se o serviço voltou ao normal.
@@ -164,34 +164,52 @@ https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/26
 
 
 # Aula 13/10
-https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+[CQRS](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
 
 - CQRS (Command Query Responsibility Segregation)
   - O padrão CQRS propõe a separação das operações de leitura (Query) e escrita (Command) em modelos diferentes, permitindo otimizar cada uma de forma independente. Isso é especialmente útil em sistemas complexos onde as necessidades de leitura e gravação são distintas. Com isso, podemos ter modelos de dados otimizados para consulta e outros para persistência, melhorando desempenho, escalabilidade e manutenibilidade, um dos pontos negativos é ler o mesmo dado em dois lugares diferentes, o que pode gerar inconsistências se não for bem implementado.
 
 # Aula 16/10
-- https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
-  - Retry Pattern
 
-- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fapp.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F38%5B%253Bvnd.vst.idref%253Dcap9.xhtml%5D%21%2F4&brand=app.minhabiblioteca.com.br
+[Retry](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
+
+  - Retry Pattern
+    - Criado para que as aplicações lidem melhor com falhas transitórias, falhas temporárias que acontecem ao acessar serviços remotos, banco de dados ou recursos de redes. A ideia é tentar de novo depois de esperar um pouco de tempo, ao invés de falhar imediatamente.
+
+    Estratégias de Retry
+• Cancelar
+
+Interrompe imediatamente quando a falha não é transitória.
+
+• Retry imediato
+
+Reexecuta de imediato em falhas raras (ex.: pacote corrompido).
+
+• Retry com atraso
+
+Aguarda um pequeno intervalo antes de tentar novamente.
+
+• Retry incremental
+
+Aumenta o tempo de espera progressivamente a cada tentativa.
+
+• Exponential Backoff
+
+Dobra o atraso a cada tentativa, evitando sobrecarregar o serviço.
 
 # Aula 20/10 e 23/10
-
-- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fapp.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F40%5B%253Bvnd.vst.idref%253Dcap10.xhtml%5D%21%2F4&brand=app.minhabiblioteca.com.br
+[Estilo Arquitetura em Camadas](https://app.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/40%5B%3Bvnd.vst.idref%3Dcap10.xhtml%5D!/4)
 
 
 # Aula 27/10 e 30/10
-
-- https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4
+[Estilo Arquitetura em Pipeline](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4)
 
 
 # Aula 03/11 e 06/11
-
-- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F44%5B%253Bvnd.vst.idref%253Dcap12.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+[Estilo de Arquitetura Microkernel](https://integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/42%5B%3Bvnd.vst.idref%3Dcap11.xhtml%5D!/4)
 
 # Aula 10/11 e 13/11
-
-- https://login.vitalsource.com/?redirect_uri=https%3A%2F%2Fintegrada.minhabiblioteca.com.br%2Freader%2Fbooks%2F9788550819754%2Fepubcfi%2F6%2F54%5B%253Bvnd.vst.idref%253Dcap17.xhtml%5D%21%2F4&brand=integrada.minhabiblioteca.com.br
+[Estilo de Arquitetura Microsserviços](integrada.minhabiblioteca.com.br/reader/books/9788550819754/epubcfi/6/54%5B%3Bvnd.vst.idref%3Dcap17.xhtml%5D!/4)
 
 
   
